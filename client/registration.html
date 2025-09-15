@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Self Assessment App - Registration</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, #E6F0F2 50%, #CDE6E8 50%);
+    }
+
+    .container {
+      display: flex;
+      width: 950px;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Welcome container on left side for registration */
+    .welcome-container {
+      flex: 1;
+      background: linear-gradient(135deg, #90C9CF, #5FA8AF);
+      color: white;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .welcome-container h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .welcome-container p {
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    /* Form container now on right side */
+    .form-container {
+      flex: 1;
+      background-color: #CDE6E8;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #1E3D59;
+    }
+
+    .form-container img.logo {
+      width: 70px;
+      margin-bottom: 30px;
+      align-self: center;
+    }
+
+    .form-container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .form-container p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 2px solid #90C9CF;
+      border-radius: 8px;
+      outline-color: #5FA8AF;
+      transition: border-color 0.3s ease;
+      color: #1E3D59;
+      background-color: #E6F0F2;
+    }
+
+    .input-group input::placeholder {
+      color: #5FA8AF;
+    }
+
+    .input-group input:focus {
+      border-color: #5FA8AF;
+      background-color: #fff;
+    }
+
+    button {
+      background-color: #5FA8AF;
+      color: white;
+      font-size: 18px;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #90C9CF;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .form-container,
+      .welcome-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Gradient Welcome on LEFT side now -->
+    <div class="welcome-container">
+      <h2>Welcome to Skillify!</h2>
+      <p>
+        Start your journey with us. Build your profile, track growth, and unlock your potential today.
+      </p>
+    </div>
+
+    <!-- Registration Form on RIGHT -->
+    <div class="form-container">
+      <img src="logo.jpg" alt="Logo" class="logo" />
+      <h2>Registration</h2>
+      <p>Create your account</p>
+
+      <div class="input-group">
+        <input type="text" placeholder="Name" />
+      </div>
+      <div class="input-group">
+        <input type="email" placeholder="Email" />
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="Phone No." />
+      </div>
+
+      <button>REGISTER</button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Self Assessment App - Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Alternating gradient for main background */
+      background: linear-gradient(45deg, #E6F0F2 50%, #CDE6E8 50%);
+    }
+
+    .container {
+      display: flex;
+      width: 900px;
+      background: #1E3D59;
+      /* darkest color */
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .container {
+      width: 950px;
+      display: flex;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Form container */
+    .form-container {
+      flex: 1;
+      background-color: #CDE6E8;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #1E3D59;
+      /* font color darkest */
+    }
+
+    .form-container img.logo {
+      width: 70px;
+      margin-bottom: 30px;
+      align-self: center;
+    }
+
+    .form-container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .form-container p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 2px solid #90C9CF;
+      border-radius: 8px;
+      outline-color: #5FA8AF;
+      transition: border-color 0.3s ease;
+      color: #1E3D59;
+      background-color: #E6F0F2;
+    }
+
+    .input-group input::placeholder {
+      color: #5FA8AF;
+    }
+
+    .input-group input:focus {
+      border-color: #5FA8AF;
+      background-color: #fff;
+    }
+
+    button {
+      background-color: #5FA8AF;
+      /* 4th color */
+      color: white;
+      font-size: 18px;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #90C9CF;
+      /* 3rd color */
+    }
+
+    /* Welcome container */
+    .welcome-container {
+      flex: 1;
+      background: linear-gradient(135deg, #90C9CF, #5FA8AF);
+      color: white;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .welcome-container h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .welcome-container p {
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .form-container,
+      .welcome-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-container">
+      <img src="logo.jpg" alt="Logo" class="logo" />
+      <h2>Hello!</h2>
+      <p>Sign in to your account</p>
+      <div class="input-group">
+        <input type="email" placeholder="Email" />
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Password" />
+      </div>
+      <button>SIGN IN</button>
+    </div>
+    <div class="welcome-container">
+      <h2>Welcome Back!</h2>
+      <p>
+        Track your learning, assess your skills, and grow with confidence. Let's make progress together.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
